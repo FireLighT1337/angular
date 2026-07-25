@@ -1,0 +1,26 @@
+<div class="backdrop" (click)="onCancelAddTask()"></div>
+<dialog open>
+  <h2>Add Task</h2>
+  <form (ngSubmit)="onSubmit()">
+    <p>
+      <label for="title">Title</label>
+      <!-- ngModel is a feature that Angular offers, a Directive, here we can use it for 2-way binding to register the user input -->
+      <input type="text" id="title" name="title" [(ngModel)]="enteredTitle" />
+    </p>
+
+    <p>
+      <label for="summary">Summary</label>
+      <textarea id="summary" rows="5" name="summary" [(ngModel)]="enteredSummary"></textarea>
+    </p>
+
+    <p>
+      <label for="due-date">Due Date</label>
+      <input type="date" id="due-date" name="due-date" [(ngModel)]="enteredDate" />
+    </p>
+
+    <p class="actions">
+      <button type="button" (click)="onCancelAddTask()">Cancel</button>
+      <button type="submit">Create</button>
+    </p>
+  </form>
+</dialog>

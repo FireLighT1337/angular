@@ -1,0 +1,11 @@
+<app-card>
+  <article>
+    <h2>{{ task.title }}</h2>
+    <!-- the | is called a pipe, in this case we use the date pipe to make the date more readable. we need to import it in the task.ts to use it -->
+    <time>{{ task.dueDate | date: 'fullDate' }}</time>
+    <p>{{ task.summary }}</p>
+    <p class="actions">
+      <button (click)="onCompleteTask()">Complete</button>
+    </p>
+  </article>
+</app-card>
