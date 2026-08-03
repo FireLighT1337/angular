@@ -1,0 +1,8 @@
+<main>
+  <app-header />
+  <app-user-input (calculate)="onCalculate($event)" />
+  <app-investment-results
+    [results]="results()"
+    [hasSubmitted]="hasSubmitted()"
+  />
+</main>
