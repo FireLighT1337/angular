@@ -1,0 +1,26 @@
+<!-- advanced class binding -->
+<div
+  [class]="{
+    status: true,
+    'status-online': currentStatus === 'online',
+    'status-offline': currentStatus === 'offline',
+    'status-unknown': currentStatus === 'unknown',
+  }"
+>
+  <!-- multiple ways to set styles aswell
+   [style]="{
+    'font-size': '64px',
+    fontSize: '64px',
+    [style.fontSize]="'64px'"
+  }"  -->
+  @if (currentStatus === "online") {
+    <p>Servers are online</p>
+    <p>All systems are operational.</p>
+  } @else if (currentStatus === "offline") {
+    <p>Servers are offline</p>
+    <p>Functionality should be restored soon.</p>
+  } @else {
+    <p>Server status is unknown</p>
+    <p>Fetching server status failed.</p>
+  }
+</div>

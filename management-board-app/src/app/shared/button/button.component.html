@@ -1,0 +1,11 @@
+<span>
+  <ng-content />
+</span>
+<!-- we are using a css selector here to use the icon class to select specific elements for this ng content -->
+<!-- <ng-content select=".icon" /> -->
+
+<!-- this is advanced content projection, we use ngProjectAs to define a selector and then use it together with ng content -->
+<span class="icon">
+  <!-- we can add any fallback placeholder between the tags here -->
+  <ng-content select="icon"> fallback </ng-content>
+</span>
