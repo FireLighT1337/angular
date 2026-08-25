@@ -1,0 +1,8 @@
+<div>
+  <!-- instead of using an href we use routerLink here, it will analyse the routing and will not fetch unnecessary files -->
+  <!-- for highlighting the currently selected user the routerLinkActive feature is nice, you can pass a css class for highlighting the specific user -->
+  <a [routerLink]="['/users', user().id, 'tasks']" routerLinkActive="selected">
+    <img [src]="imagePath()" [alt]="user().name" />
+    <span>{{ user().name }}</span>
+  </a>
+</div>

@@ -1,0 +1,12 @@
+<section id="tasks">
+  <header>
+    <h2>{{ userName() }} Tasks</h2>
+    <!-- when working with child routes, the path is always relative, so we can just use /tasks/new instead of the whole path -->
+    <!-- also, no "/" at the start cause angular adds it automatically-->
+    <menu>
+      <a [routerLink]="['tasks/new']">Add Task</a>
+    </menu>
+  </header>
+
+  <router-outlet />
+</section>
